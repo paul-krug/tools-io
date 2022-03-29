@@ -25,6 +25,7 @@ def save( object, filename, protocol = 0 ):
 	file = gzip.GzipFile( filename, 'wb' )
 	file.write( pickle.dumps( object, protocol ) )
 	file.close()
+	return
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 def load( filename ):
 	"""Loads a compressed object from disk
